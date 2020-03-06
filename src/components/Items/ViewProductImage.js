@@ -11,7 +11,7 @@ const ViewProductImage = ({ itemID }) => {
         return window.btoa(binary);
     };
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/product/photo/${itemID}`, { headers: { "Cache-Control": "no-cache" }, method: "GET", mode: "cors" }).then((res) => {
+        fetch(`${process.env.REACT_APP_BASE_URL || 'http://localhost:8080'}/api/product/photo/${itemID}`, { headers: { "Cache-Control": "no-cache" }, method: "GET", mode: "cors" }).then((res) => {
             res.arrayBuffer().then((buffer) => {
                 var base64Flag = 'data:image/jpeg;base64,';
                 var imageStr = arrayBufferToBase64(buffer);

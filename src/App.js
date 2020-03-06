@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   loginUser = user => {
-    API.doPost(`${process.env.REACT_APP_BASE_URL}/api/login`, user, data => {
+    API.doPost(`${process.env.REACT_APP_BASE_URL || 'http://localhost:8080'}/api/login`, user, data => {
       console.log(data);
       localStorage.setItem("user", JSON.stringify(data.user));
       this.setState({
@@ -67,7 +67,7 @@ class App extends Component {
   };
 
   logoutUser = user => {
-    API.doPost(`${process.env.REACT_APP_BASE_URL}/api/logout`, user, data => {
+    API.doPost(`${process.env.REACT_APP_BASE_URL || 'http://localhost:8080'}/api/logout`, user, data => {
       console.log(data);
       localStorage.removeItem("user");
       this.setState({
@@ -78,7 +78,7 @@ class App extends Component {
   };
 
   registerUser = (user, callback) => {
-    API.doPost(`${process.env.REACT_APP_BASE_URL}/api/register`, user, data => {
+    API.doPost(`${process.env.REACT_APP_BASE_URL || 'http://localhost:8080'}/api/register`, user, data => {
       if (!data.error) {
         callback();
       } else {

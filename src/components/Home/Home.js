@@ -15,7 +15,7 @@ class Home extends Component {
     this.state = { products: [] }
   }
   getProducts = () => {
-    API.doGet(`${process.env.REACT_APP_BASE_URL}/api/products`, (data) => {
+    API.doGet(`${process.env.REACT_APP_BASE_URL || 'http://localhost:8080'}/api/products`, (data) => {
       this.setState((state) => ({ ...state, products: data }))
     })
   }
