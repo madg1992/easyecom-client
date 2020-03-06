@@ -1,0 +1,23 @@
+.info {
+  margin-top: 20vh;
+}
+
+.info .card {
+  border: 1px solid slateblue;
+  width: 80%;
+}
+
+.goback-btn {
+  border: 1px solid salmon !important;
+  margin: 0 !important;
+  height: 100%;
+}
+
+.info .image {
+  border: 1px solid rgb(194, 81, 0) !important;
+  flex: none;
+}
+
+.info .item {
+  display: flex;
+}

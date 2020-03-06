@@ -1,0 +1,39 @@
+.card {
+  /* border: 1px solid darkblue !important; */
+  padding: 0 -15px;
+  margin: 3vh;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.card .card-body {
+  padding: 3rem 0;
+}
+
+.card .card-link {
+  margin: auto;
+  padding: 10px;
+}
+
+.card .card-text {
+  margin: auto;
+}
+
+/* .card .addtoCart {
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #16cc9b;
+  padding: 8px 18px;
+  color: #16cc9b; 
+} */
+
+/* .card .addtoCart:hover {
+  background-color: #16cc9b;
+  color: #fff;
+} */
+
+.card .addtoCart .fas {
+  font-size: 1rem;
+}
